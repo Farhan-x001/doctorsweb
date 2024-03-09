@@ -1,0 +1,157 @@
+/* styles.module.css */
+ul.horizontalnavbar{
+    list-style: none;
+}
+.horizontalnavbar {
+    display: flex;
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .horizontalnavbar li {
+    margin-right: 5px;
+  }
+  
+  .horizontalnavbar li:last-child {
+    margin-right: 0;
+  }
+  
+  .horizontalnavbar li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #787575;
+    /* background-color: #ef8c86; */
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .horizontalnavbar li a:hover {
+    background-color:  #ef8c86;
+    color: #fff;
+  }
+  .card {
+    width: 140px;
+  /* width: calc(25% - 80px);  */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 82px; /* One-fourth of 164px */
+  height: 71px; /* One-fourth of 142px */
+  margin: 0 auto 0px; /* Center the image and add bottom margin */
+  display: block;
+}
+.appointmentcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.name {
+  /* margin-top: 2px; 
+  margin-bottom: 2px; */
+  font-size: 14px; /* Decreased font size */
+}
+
+.designation {
+  font-style: italic;
+  margin-bottom: 2px;
+  font-size: 12px; /* Decreased font size */
+}
+
+.time {
+  font-style: italic;
+  margin-bottom: 2px; 
+  font-size: 12px; /* Decreased font size */
+}
+
+.viewMore {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 6px 8px; /* Decreased padding */
+  border-radius: 3px; /* Decreased border radius */
+  cursor: pointer;
+  font-size: 12px; /* Decreased font size */
+}
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .popup {
+  background-color: rgb(177, 108, 108);
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-blend-mode: lighten;
+} */
+
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-content {
+  /* Add your specific styles for content here */
+}
+
+.exit-btn {
+  cursor: pointer;
+}
+.button {
+  width: 100px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #183b41;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  margin-left: 700px;
+  /* margin: 10px; */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000; /* Ensure the overlay appears above other content */
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1001; 
+}

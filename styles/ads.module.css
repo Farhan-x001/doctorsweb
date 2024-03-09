@@ -1,0 +1,107 @@
+/* ads.module.css */
+
+.dragDropBlock {
+    width: 1025px;
+    height: 484px;
+    top: 223px;
+    left: 321px;
+    border-radius: 16px;
+    border: 1px solid #EF8C86;
+    background: #FFFFFF;
+    margin: 20px;
+    text-align: center;
+
+  }
+  
+  .borders {
+    border: 1px solid rgba(239, 140, 134, 1)
+  }
+  /* ads.module.css */
+
+.fileButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 16px;
+    background: #EF8C86;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .cloudIcon {
+    width: 120px;
+    height: 96px;
+    top: 335px;
+    left: 785px;
+    padding: 6px 0;
+  }
+  
+  .fileInput {
+    width: 217px;
+    height: 30px;
+    top: 455px;
+    left: 737px;
+    text-align: center;
+
+  }
+  
+  .button {
+    width: 205px;
+    height: 50px;
+    top: 515px;
+    left: 743px;
+    padding: 10px 20px;
+    border-radius: 16px;
+    gap: 20px;
+    background: #EF8C86;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  
+  .fileType {
+    
+    top: 605px;
+    left: 725px;
+    text-align: center;
+
+  }
+  
+  .maxSize {
+    text-align: center;
+
+  }
+  
+  /* Ensure the p selector contains a local class or id */
+  .dragDropBlock p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  
