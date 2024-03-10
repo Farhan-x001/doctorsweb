@@ -37,11 +37,12 @@ const DoctorLoginPage = ({ setIsAuthenticated }) => {
 
   return (
     <div>
+    <div className={styles.body}>
+
 <div className={styles.image1}>
       <Image src="/images/doctors.png" alt="" width={474} height={335} />
     </div>      <Image  src="/images/left.png" alt="Logo" width={100} height={100} className={styles.image2} />
       <Image  src="/images/right.png" alt="Logo" width={100} height={100} className={styles.image3} />
-
       <div className={styles.head}><h1>Healthkare.ai</h1></div>
       <div className={styles.container}>
         <h2 style={{textAlign: 'center'}}>Login Page</h2>
@@ -72,6 +73,7 @@ const DoctorLoginPage = ({ setIsAuthenticated }) => {
     </div>
         <button onClick={handleLogin} className={styles.button}>Login</button>
       </div>
+    </div>
     </div>
   );
 };

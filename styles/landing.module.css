@@ -11,6 +11,24 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+  .para{
+    color: rgba(44, 105, 117, 1);
+
+  }
+  .healthkare{
+    width: 215px;
+  height: 48px;
+  position: absolute;
+  top: 34px;
+  left: 46px;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(44, 105, 117, 1);
+  }
   
   .linksContainer {
     display: flex;
@@ -22,14 +40,16 @@
     margin: 0 10px;
     padding: 20px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 24px;
     text-align: center;
     text-decoration: none;
     color: inherit;
+    border:  2px solid #E0E0E0;
   }
   
   .linkBox:hover {
     outline: 2px solid #183b41;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   
   .linkBox img {
@@ -42,6 +62,10 @@
     width: 150px; /* Increase the width of the second image */
     height: 180px;
     display: block;
+  }
+  .body{
+    display: block;
+    background-color: #fcfcfc;
   }
   
   .img1 img {

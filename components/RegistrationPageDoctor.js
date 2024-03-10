@@ -32,45 +32,42 @@ const RegistrationPage = ({ setIsAuthenticated }) => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-
-    // Basic validation - check if required fields are filled out
-    const requiredFields = ['name', 'email', 'password', 'phone', 'specialization', 'role', 'experience', 'clinicLocation'];
-    // for (const key of requiredFields) {
-    //   if (!formData[key]) {
-    //     setRegistrationStatus('Please fill out all required fields.');
-    //     return;
-    //   }
-    // }
-
-    // Proceed with registration if all required fields are filled out
+  
     try {
       const response = await registerDoctor(
         formData.name,
-        formData.email,
-        formData.password,
-        formData.phone,
-        formData.specialization,
         formData.role,
+        formData.email,
+        formData.phone,
+        formData.clinicLocation,
+        formData.specialization,
         formData.experience,
-        formData.clinicLocation
+        formData.password
       );
-    
-      setRegistrationStatus(response.message);
-      
-      if (response.success) {
+  
+      console.log('Response:', response);
+  
+      if (response && response.data && response.data.createDoctor && response.data.createDoctor.phone === formData.phone) {
         setIsAuthenticated(true);
-        router.push('/landing');
+        router.push('/waiting');
         console.log('Registration successful!');
+      } else {
+        setRegistrationStatus(response.message || 'Registration failed. Please try again.');
+        console.error('Registration failed:', response.error);
       }
     } catch (error) {
       console.error('Registration failed:', error);
       setRegistrationStatus('Registration failed. Please try again.');
-      console.log('Registration not successful!');
     }
   };
-
+  
+  
+  
   return (
     <div>
+      <div className={styles.body}>
+
+
       <div className={styles.head}><h1>Healthkare.ai</h1></div>
       <Image src="/images/right.png" alt="Logo" width={100} height={100} className={styles.image3} />
       <div className={styles.container}>
@@ -154,6 +151,17 @@ const RegistrationPage = ({ setIsAuthenticated }) => {
                 required
               />
             </div>
+            <div className={styles.gridItem}>
+              <h3>Clinic Location:</h3> {/* Add Clinic Location input field */}
+              <input
+                type="text"
+                placeholder="Clinic Location"
+                value={formData.clinicLocation}
+                onChange={(e) => setFormData({ ...formData, clinicLocation: e.target.value })}
+                className={styles.input}
+                required
+              />
+            </div>
             <p>{registrationStatus}</p>
           </div>
         )}
@@ -166,6 +174,7 @@ const RegistrationPage = ({ setIsAuthenticated }) => {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

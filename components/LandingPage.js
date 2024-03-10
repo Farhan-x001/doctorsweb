@@ -6,9 +6,11 @@ import Image from 'next/image';
 
 const LandingPage = () => {
   return (
+    <div className={styles.body}>
+      <div className={styles.healthkare}>HealthKare.AI</div>
     <div className={styles.centered}>
-      <h1 className={styles.brandLabel}>Healthkare.ai</h1>
-      <p>Please select your role:</p>
+      <h1 className={styles.brandLabel}>Select your role</h1>
+      <p className={styles.para}>To move forward you have to select your role</p>
       <div className={styles.linksContainer}>
         <div className={styles.linkBox}>
           <Link href="/doctor-login">
@@ -27,6 +29,7 @@ const LandingPage = () => {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

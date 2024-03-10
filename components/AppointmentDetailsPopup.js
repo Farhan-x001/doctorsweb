@@ -6,7 +6,6 @@ const AppointmentDetailsPopup = ({ appointment, onClose }) => {
       <div className={styles.popupOverlay}>
         <div className={styles.popup}>
           <div className={styles.popupContent}>
-            {/* Display appointment details */}
             <h2 className={styles.popupTitle}>{appointment.name}</h2>
             <hr className={styles.hr} />
             <div className={styles.imageContainer}>

@@ -19,7 +19,13 @@
   text-align: left;
   margin: 0;
 }
-
+.body{
+  display: block;
+  background-color: #fcfcfc;
+  width: auto;
+  height: 868px;
+  margin-top: -22px;
+}
 .rightAlign {
   text-align: center;
   margin: 0;

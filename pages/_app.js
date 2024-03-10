@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import LandingPage from '../components/LandingPage';
 import DoctorLoginPage from '../components/DoctorLoginPage';
 import HospitalLoginPage from '../components/HospitalLoginPage';
-import RegistrationPageDoctor from '../components/RegistrationPageDoctor1';
+import RegistrationPageDoctor from '../components/RegistrationPageDoctor';
 import RegistrationPageHospital from '../components/RegistrationPageHospital';
 import '../styles/globals.css';
 

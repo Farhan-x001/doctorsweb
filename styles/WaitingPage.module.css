@@ -1,4 +1,25 @@
-.popupOverlay {
+.body{
+  display: block;
+  background-color: #fcfcfc;
+}
+.p{
+    font-family: Poppins;
+}
+.healthkare{
+    width: 190px;
+  height: 48px;
+  position: absolute;
+  top: 34px;
+  left: 46px;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: white;
+}
+  .popupOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +33,8 @@
   
   .popup {
     background-color: #fff;
+    outline: 2px solid rgba(44, 105, 117, 1);
+
     padding: 20px;
     border-radius: 8px;
     width: 50%; /* Adjusted width to 25% */
@@ -32,9 +55,9 @@
   }
   
   .popupContent img {
-    max-width: 10%;
+    max-width: 100%;
     display: block;
-    outline: #858789 auto 3px;
+    
     border-radius: 20px;
     margin: auto;
     height: auto;
@@ -59,7 +82,10 @@
     flex: 2; /* Allow input to grow */
   width: 100%;
   }
-  
+  .popupTitle{
+    color:  rgba(44, 105, 117, 1);
+    ;
+  }
   .button {
     padding: 8px 16px;
     background-color: #007bff;
@@ -89,3 +115,4 @@ width: 200px;
 height: auto;
 transform: translate(-50%, 50%);
 }
+
