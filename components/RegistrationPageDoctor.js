@@ -61,8 +61,6 @@ const RegistrationPage = ({ setIsAuthenticated }) => {
     }
   };
   
-  
-  
   return (
     <div>
       <div className={styles.body}>

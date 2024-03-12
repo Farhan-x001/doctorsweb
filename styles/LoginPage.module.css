@@ -15,16 +15,16 @@
   }
   
   .container {
-    max-width: 400px;
+    width: 400px;
     margin: 0 auto;
     color: #100101;
     padding: 10px;
     border-radius: 5px;
     position: absolute;
-    top: 370px; /* Adjust the top position as needed */
+    top: 300px; /* Adjust the top position as needed */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 20px;
     color: rgb(17, 0, 0);
     
   }
@@ -35,8 +35,8 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 15px;
   }
-  
   .button {
     width: 420px;
     margin-right: 10px;
@@ -46,27 +46,28 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* margin: 10px; */
+    margin-top: 10px;
   }
- /* MyComponent.module.css */
 
- .LoginPage_newuser__6iyUw{
-   
-   padding-bottom:  10px;
-   
-}
-.link{
-  
-}
 
 .newuser {
-  text-decoration: none; 
- /* Remove underline */
-  cursor: pointer; 
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: rgba(44, 105, 117, 1);
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  cursor: pointer;
   font-size: 19px;
   margin-right: 10px;
   padding-bottom: 5px;
 }
+
 
 .light-theme .link {
   color: #183b41; /* Color for light theme */
@@ -92,12 +93,11 @@
 
 
   .image1{
-   
         display: block; 
-        margin: 0 auto;  
-        width: 400px;
-        height: auto;  
-         
+        /* margin: 0 auto;   */
+        width: 90px;
+        height: auto;   
+        margin-left: 500px;
   }
   .image2{
     display: block; 
@@ -134,8 +134,9 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 20px;
+
   }
-  
   /* Arrange two fields on the same line */
   .row {
     display: flex;

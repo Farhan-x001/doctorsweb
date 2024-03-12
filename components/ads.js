@@ -45,31 +45,45 @@ const AdsPage = () => {
   return (
     <div className="content">
       <nav className="vertical-navbar">
-        <ul>
-          <h3>HealthKare.AI</h3>
-          <li>
-            <Image src="/images/dashboard.png" alt="" width={100} height={100} />
-            <a onClick={() => router.push('/home')}>Dashboard</a>
-          </li>
-          <li>
-            <Image src="/images/hospital.png" alt="" width={100} height={100} />
-            <a onClick={() => router.push('/hospitals')}>Appointments</a>
-          </li>
-          <li>
-            <Image src="/images/request.png" alt="" width={100} height={100} />
-            <a onClick={() => router.push('/request')}>Doctors</a>
-          </li>
-          <li>
-            <Image src="/images/ads.png" alt="" width={100} height={100} />
-            <a onClick={() => router.push('/patient')}>Patients</a>
-          </li>
-          <li>
-            <Image src="/images/ads.png" alt="" width={100} height={100} />
-            <a onClick={() => router.push('/ads')}>Ads Banner</a>
-          </li>
-        </ul>
-        
-      </nav>
+  <ul>
+    <li>
+      <div className="healthkare-header">
+        <h2>HealthKare.AI</h2>
+        <hr />
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/dashboard.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/home')}>Dashboard</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/hospital.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/hospitals')}>Appointments</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/Doctor.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/request')}>Doctors</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/p1.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/patient')}>Patients</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item1">
+        <Image src="/images/adin.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/ads')}>Ads Banner</a>
+      </div>
+    </li>
+  </ul>
+</nav>
       <div className="dashboard-data">
       <div className="head-data">
           <h1> Upload Banner</h1>

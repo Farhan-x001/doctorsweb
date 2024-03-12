@@ -9,7 +9,20 @@ body {
 .content{
 
 }
-
+.healthkare{
+width: 215px;
+height: 48px;
+position: absolute;
+top: 34px;
+left: 6px;
+font-family: Poppins;
+font-size: 30px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: -0.02em;
+text-align: center;
+color: rgba(44, 105, 117, 1);
+}
 .main-content {
   flex: 1; /* Fill remaining vertical space */
   background-color:  #131515; /* Set background color to white */
@@ -22,33 +35,98 @@ body {
   height: 1000;
   padding: 20px;
   background-color: #68b2a0;
-  /* background-color: #3b655b; */
+  
 
 }
 
+.healthkare-header{
+  display: block;
+  margin-top: 2px;
+}
+.healthkare-header h2 {
+  width: 115px;
+  height: 48px;
+  top: 23px;
+  left: 20px;
+  color : rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: -1px;
+ 
+}
+
+.healthkare-header hr {
+  width: 160px; /* Adjust the width as needed */
+  /* height: 1px;  */
+  border: none; /* Remove the default border */
+  border-top: 1px solid rgba(255, 255, 255, 1); 
+  display: inline-block; /* Align along with the text */
+  margin-left: 8px;
+}
+
+
 .vertical-navbar ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
+  
   margin: 0;
 }
 .vertical-navbar li img {
   width: 30px; /* Adjust the width of the icons */
   height: 30px; /* Adjust the height of the icons */
   margin-right: 10px; /* Adjust spacing between icon and text */
-  margin-bottom: -10px;
+  margin-bottom: -15px;
+  border-radius: 10px;
+  bottom: 2px;
+}
+.datatable h2{
+  margin-left: 20px;
+}
+.tr1{
+  background-color:  rgba(104, 178, 160, 1);
 }
 
 .vertical-navbar ul li {
-  margin-bottom: 10px;
+  padding-bottom: 15px ;
 }
 
 .vertical-navbar ul li a {
-  color: white;
-  text-decoration: none;
+
+  /* text-decoration: none; */
   font-size: 18px;
+  margin-top: -16px;
+ 
+}
+.nav-item1 ul li a{
+  color: black;
+}
+.nav-item1 {
+  display: block;
+  background-color: #ffffff;
+  width: 250px;
+  height: 35px;
+  align-items: center; /* This property is for flexbox, it won't affect a block-level element */
+  border-radius: 20px;
+  padding-left: 10px; /* 5px padding from the left for the text */
 }
 
-.vertical-navbar ul li a:hover {
+.nav-item1 a {
+  text-decoration: underline; /* Add underline to the text */
+  color: black; /* Text color */
+  display: block; /* For aligning text vertically */
+  align-items: center; /* Align text vertically */
+  height: 100%; /* Ensure the anchor tag fills the entire height of the block */
+  margin-left: 50px; /* Add margin from the left */
+  margin-top: 1px;
+  margin-bottom: 20px;
+   
+}
+
+.vertical-navbar ul li  a:hover {
   color: lightgray;
 }
 
@@ -83,13 +161,13 @@ body {
 }
 .patation {
   display: flex;
-  width: 200px;
+  width: 250px;
   background-color: #ffffff;
   border-radius: 20px;
-  outline: #c0bbbb solid 2px;
+  border: 1.5px solid hsl(0, 9%, 83%); /* Set border color */
   position: absolute;
-  right: 200px;
-  top: 360px;
+  right: 110px;
+  top: 335px;
 }
 .patation table {
   border-collapse: collapse; /* Remove border spacing and use single border */
@@ -113,17 +191,15 @@ body {
 
 .dashboard-data {
   background-color: #fff;
-  width: 1290px;
-  height: 676px;
-  /* block-size: fit-content; */
+  width: 1240px;
+  height: 670px;
   padding: 20px;
-  
   flex: 1; /* Fill remaining horizontal space */
   margin-right: 100px; /* Center horizontally */
-  margin-left: 180px; /* Center horizontally */
+  margin-left: 230px; /* Center horizontally */
   margin-bottom: 10px;
-  margin-top: -240px; /* Change top margin to 5px */
-  border-radius: 5px; /* Add border radius */
+  margin-top: -350px; /* Change top margin to 5px */
+  border-radius: 8px; /* Add border radius */
   display: block; /* Set as block element */
 }
 
@@ -142,7 +218,6 @@ body {
   height: auto; /* Set height */
   padding: 20px;
   margin-right: 20px; /* Add margin between boxes */
- 
 }
 
 .box:last-child {
@@ -222,12 +297,14 @@ tr {
 
 /* Adjust styles for table cells */
 th, td {
+  
   padding: 10px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
 }
 
 th {
+  width: 200px;
   font-weight: bold;
 }
 
@@ -235,19 +312,30 @@ th {
 tr:hover {
   background-color: #f5f5f5;
 }
-/* You might need to adjust the background image and styles for the select box based on your design */
-/* Adjust table size */
+
 .table-container table {
-  width: 100%;
+  width: 200px;
+  border-spacing: 10px;
   border: 2px solid #cdcbcb;
   border-radius: 15px; /* Set table width to 100% */
    /* Collapse borders to prevent double borders */
+}
+.datatable{
+  border: 1.5px solid hsl(0, 9%, 83%); 
+  display: block;
+  border-radius: 15px;
+  width: fit-content;
+  margin-top: 20px;
+  /* font-size: 13px; */
+  /* Set border color */
 }
 
 /* Adjust column widths */
 .table-container th,
 .table-container td {
-  padding: 10px; /* Add padding for better spacing */
+  border: none;
+  width: 200px;
+  padding: 15px; /* Add padding for better spacing */
   text-align: left; /* Align text to the left */
 }
 

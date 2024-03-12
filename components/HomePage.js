@@ -156,35 +156,48 @@ const HomePage = () => {
       <div className="content">
         
       <nav className="vertical-navbar">
-        
-      <ul>
-      <h3>HealthKare.AI</h3>
-        <li>
-          <Image  src="/images/dashboard.png" alt=""  width={100} height={100} />
-          <a onClick={() => router.push('/home')}>Dashboard</a>
-        </li>
-        <li>
-          <Image  src="/images/hospital.png" alt="" width={100} height={100} />
-          <a onClick={() => router.push('/hospitals')}>Appointments</a>
-        </li>
-        <li>
-          <Image  src="/images/request.png" alt=""  width={100} height={100} />
-          <a onClick={() => router.push('/request')}>Doctors</a>
-        </li>
-        <li>
-            <Image  src="/images/ads.png" alt=""  width={100} height={100} />
-            <a onClick={() => router.push('/patient')}>Patients</a>
-          </li>          
-        
-        <li>
-          <Image  src="/images/ads.png" alt=""  width={100} height={100} />
-          <a onClick={() => router.push('/ads')}>Ads Banner</a>
-        </li>  
-      </ul>
-    </nav>
+  <ul>
+    <li>
+      <div className="healthkare-header">
+        <h2>HealthKare.AI</h2>
+        <hr />
+      </div>
+    </li>
+    <li>
+      <div className="nav-item1">
+        <Image src="/images/dasin.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/home')}>Dashboard</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/hospital.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/hospitals')}>Appointments</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/Doctor.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/request')}>Doctors</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/p1.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/patient')}>Patients</a>
+      </div>
+    </li>
+    <li>
+      <div className="nav-item">
+        <Image src="/images/ads.png" alt="" width={30} height={30} />
+        <a onClick={() => router.push('/ads')}>Ads Banner</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
         <div className="dashboard-data">
-          {/* Your dashboard data content here */}
-          {/* For example: */}
+          
           <div className="head-data">
           <p>Hi, here is your daily analytics</p>
           <h1> Dashboard</h1>
@@ -194,62 +207,42 @@ const HomePage = () => {
 
           <div className="box">
             <h2>124</h2>
-            <Image  src="/images/icon1.png"  width={100} height={100} alt="Icon 1" />
+            <Image  src="/images/ab1.png"  width={100} height={100} alt="Icon 1" />
             <p>Appointments</p>
           </div>
           <div className="box">
             <h2>12</h2>
-            <Image  src="/images/icon2.png"  width={100} height={100} alt="Icon 2" />
+            <Image  src="/images/db1.png"  width={100} height={100} alt="Icon 2" />
             <p>Avalible doctors</p>
           </div>
           <div className="box">
             <h2>98712</h2>
-            <Image  src="/images/icon3.png"  width={100} height={100} alt="Icon 3" />
+            <Image  src="/images/mb1.png"  width={100} height={100} alt="Icon 3" />
             <p>INR/Day</p>
           </div>
            </div>
            <div className="topbartable">
-            <h2>Appointments Details</h2>
-                  <div className="fields">
-                    <div className="field">
-                      <label htmlFor="date">Select date</label>
-                      <input type="date" id="date" value={selectedDate} onChange={handleDateChange} />
-                    </div>
-                    <div className="field">
-                      <label htmlFor="sortBy">Sort by</label>
-                      <select id="sortBy">
-                        <option value="asc">Ascending</option>
-                        <option value="desc">Descending</option>
-                      </select>
-                    </div>
-                    <div className="field">
-                      <label htmlFor="search"> Search</label>
-                      <input type="text" id="search" value={searchQuery} onChange={handleSearchChange} onKeyPress={handleKeyPress} placeholder="Search..." />
-                    </div>
-                  </div>
+           
+                  
           </div>
 
           {dummyData.length > 0 ? (
-            <table>
-              {/* Table headers */}
+            
+            <table className="datatable">
+              
+              <h2>Appointments Details</h2>
               <thead>
-                <tr>
-                 
+                <tr className ="tr1">
                   <th>Patient Name</th>
-                  <th>Department</th>
                   <th>Date & Time</th>
-                  <th>Type</th>
-                  <th>Phone number</th>
-                  <th>Email</th>
+                  <th>status</th>
+                  <th>more</th>
                 </tr>
               </thead>
-              {/* Table body */}
                <tbody>
-            {/* Map through filtered data and render table rows */}
             {filteredData.map((record, index) => (
               <tr key={index}>
                 <td>{record.name}</td>
-                <td>{record.contact}</td>
                 <td>{record.registrationDate}</td>
                 <td>
                       <div className={`type-oval ${record.type === 'on time' ? 'type-hospital' : 'type-clinic'}`}>
@@ -257,8 +250,6 @@ const HomePage = () => {
                       </div>
                     </td>
                 <td>{record.Phone}</td>
-                
-                <td>{record.email}</td>
               </tr>
             ))}
           </tbody>
@@ -294,7 +285,7 @@ const HomePage = () => {
   </table>
 </div>
 
-          <div className="pagination">
+          {/* <div className="pagination">
             <div className="pagination">
               Page {currentPage} of {totalPages}
             </div>
@@ -309,7 +300,7 @@ const HomePage = () => {
             <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
               Next &raquo;
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ const DoctorLoginPage = ({ setIsAuthenticated }) => {
       <Image src="/images/doctors.png" alt="" width={474} height={335} />
     </div>      <Image  src="/images/left.png" alt="Logo" width={100} height={100} className={styles.image2} />
       <Image  src="/images/right.png" alt="Logo" width={100} height={100} className={styles.image3} />
-      <div className={styles.head}><h1>Healthkare.ai</h1></div>
+      <div className="healthkare">HealthKare.AI</div>
       <div className={styles.container}>
         <h2 style={{textAlign: 'center'}}>Login Page</h2>
         <label htmlFor="email">Username or Email Address:</label>
@@ -56,7 +56,6 @@ const DoctorLoginPage = ({ setIsAuthenticated }) => {
             setEmailValid(true);
           }}
           className={`${styles.input} ${!emailValid && styles.invalid}`}
-         
         />
         <label htmlFor="password">Password:</label>
         <input
@@ -65,12 +64,10 @@ const DoctorLoginPage = ({ setIsAuthenticated }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className={styles.input}
-        />
-         <div className={styles.newuser}>
-      <Link href="/registration-doctor">
-        New user? Register yourself
-      </Link>
-    </div>
+        />           
+      <div>
+            <span onClick={() => router.push('/registration-doctor')} className={styles.newuser}>New user? Register yourself</span>
+      </div>
         <button onClick={handleLogin} className={styles.button}>Login</button>
       </div>
     </div>

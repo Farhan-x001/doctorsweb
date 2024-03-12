@@ -132,7 +132,7 @@ ul.horizontalnavbar{
   display: flex;
   justify-content: space-between;
   align-items: left;
-  margin-left: 700px;
+  margin-left: 610px;
   /* margin: 10px; */
 }
 .overlay {
