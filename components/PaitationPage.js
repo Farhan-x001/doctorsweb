@@ -314,9 +314,9 @@ import Image from 'next/image';
                       <button onClick={handleAddDoctorClick} className={styles.button}>+ add doctor</button>
                 </div>
                   </div>
-                {showAddDoctorPopup && (
+                {/* {showAddDoctorPopup && (
                   <AddDoctorPopup onClose={() => setShowAddDoctorPopup(false)} onAddDoctor={handleAddDoctor} />
-                )}
+                )} */}
                     </div>
                     <div className={styles.appointmentcontainer}>
                   {filteredData.map(appointment => (
